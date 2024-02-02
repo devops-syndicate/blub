@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: blub-api
+  description: API definition of blub
+spec:
+  type: openapi
+  owner: admins
+  lifecycle: production
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: blub API
+    
+    paths:
+      /:
+        get:
+          summary: Returns hello

@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "blub"
+  annotations:
+    github.com/project-slug: "devops-syndicate/blub"
+    argocd/app-name: blub
+    backstage.io/kubernetes-namespace: blub
+    backstage.io/kubernetes-id: blub
+    backstage.io/kubernetes-label-selector: 'app.oam.dev/name=blub'
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - title: Link to ArgoCD
+      url: http://argo-cd.127.0.0.1.nip.io/applications/blub
+  tags:
+  - golang
+spec:
+  type: service
+  owner: admins
+  lifecycle: production
+  providesApis:
+    - blub-api
